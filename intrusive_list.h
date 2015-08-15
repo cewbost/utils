@@ -96,6 +96,14 @@ struct IntrusiveNode
     other.next = &other;
     other.previous = &other;
   }
+  void operator=(const IntrusiveNode&) = delete;
+  void operator=(IntrusiveNode&& other)
+  {
+    next = other.next;
+    previous = other.previous;
+    other.next = &other;
+    other.previous = &other;
+  }
   ~IntrusiveNode(){unlink();}
 };
 
