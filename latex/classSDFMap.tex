@@ -1,0 +1,99 @@
+\hypertarget{classSDFMap}{}\section{S\+D\+F\+Map$<$ F, Dist\+Func $>$ Class Template Reference}
+\label{classSDFMap}\index{S\+D\+F\+Map$<$ F, Dist\+Func $>$@{S\+D\+F\+Map$<$ F, Dist\+Func $>$}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structSDFMap_1_1____Field}{\+\_\+\+\_\+\+Field}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSDFMap_acd15f041a9d13c05883280f006bbf3a9}{}{\bfseries S\+D\+F\+Map} (unsigned w, unsigned h)\label{classSDFMap_acd15f041a9d13c05883280f006bbf3a9}
+
+\item 
+\hypertarget{classSDFMap_a665cbf9306bc3e22f919995649864cdb}{}{\bfseries S\+D\+F\+Map} (const \hyperlink{classSDFMap}{S\+D\+F\+Map}$<$ F, Dist\+Func $>$ \&other)\label{classSDFMap_a665cbf9306bc3e22f919995649864cdb}
+
+\item 
+\hypertarget{classSDFMap_a5235326e01a16e5a7cfc67af7cab8cc1}{}{\bfseries S\+D\+F\+Map} (\hyperlink{classSDFMap}{S\+D\+F\+Map}$<$ F, Dist\+Func $>$ \&\&other)\label{classSDFMap_a5235326e01a16e5a7cfc67af7cab8cc1}
+
+\item 
+\hypertarget{classSDFMap_a5c4e78a7f94cb1e2bb36a5cf526532d9}{}\hyperlink{classSDFMap}{S\+D\+F\+Map}$<$ F, Dist\+Func $>$ \& {\bfseries operator=} (const \hyperlink{classSDFMap}{S\+D\+F\+Map}$<$ F, Dist\+Func $>$ \&other)\label{classSDFMap_a5c4e78a7f94cb1e2bb36a5cf526532d9}
+
+\item 
+\hypertarget{classSDFMap_a63dbf729487b7fc20933b7fc9a17a7cf}{}\hyperlink{classSDFMap}{S\+D\+F\+Map}$<$ F, Dist\+Func $>$ \& {\bfseries operator=} (\hyperlink{classSDFMap}{S\+D\+F\+Map}$<$ F, Dist\+Func $>$ \&\&other)\label{classSDFMap_a63dbf729487b7fc20933b7fc9a17a7cf}
+
+\item 
+\hypertarget{classSDFMap_a3287b18c857506f2d5bc79d21643a47e}{}void {\bfseries reset} (unsigned w, unsigned h)\label{classSDFMap_a3287b18c857506f2d5bc79d21643a47e}
+
+\item 
+\hypertarget{classSDFMap_a3f927d9b7cd05720615ffdbcdb3839af}{}void {\bfseries insert\+Point} (F x, F y, F size)\label{classSDFMap_a3f927d9b7cd05720615ffdbcdb3839af}
+
+\item 
+\hypertarget{classSDFMap_a10e73a99bcb54c1d68b39274965ee73a}{}void {\bfseries generate\+Distances} ()\label{classSDFMap_a10e73a99bcb54c1d68b39274965ee73a}
+
+\item 
+\hypertarget{classSDFMap_a4176c98b581d2dec99baf34774a6d6e2}{}F \& {\bfseries operator()} (int x, int y)\label{classSDFMap_a4176c98b581d2dec99baf34774a6d6e2}
+
+\item 
+\hypertarget{classSDFMap_af729f0143246822bc353410bd7e07b11}{}F {\bfseries operator()} (double x, double y)\label{classSDFMap_af729f0143246822bc353410bd7e07b11}
+
+\item 
+\hypertarget{classSDFMap_af5164387d6e3446a10f9658fc1f637c7}{}void {\bfseries clear} (F cl)\label{classSDFMap_af5164387d6e3446a10f9658fc1f637c7}
+
+\item 
+\hypertarget{classSDFMap_aa4718eef972f9163c97f7bbda6982619}{}void {\bfseries clear} ()\label{classSDFMap_aa4718eef972f9163c97f7bbda6982619}
+
+\item 
+\hypertarget{classSDFMap_af1475e36492f77eca9ab9e58073a83d4}{}F $\ast$ {\bfseries get\+Data} ()\label{classSDFMap_af1475e36492f77eca9ab9e58073a83d4}
+
+\item 
+\hypertarget{classSDFMap_a03ee78eaa3bc0332575df312a70459dd}{}void {\bfseries get\+Resolution} (int $\ast$w, int $\ast$h)\label{classSDFMap_a03ee78eaa3bc0332575df312a70459dd}
+
+\item 
+\hypertarget{classSDFMap_ac2a2c96cd9d11c2cf7152cda64ae1052}{}{\footnotesize template$<$class O\+M $>$ }\\void {\bfseries blit} (O\+M \&other, unsigned this\+\_\+x, unsigned this\+\_\+y, unsigned other\+\_\+x, unsigned other\+\_\+y, unsigned size\+\_\+x, unsigned size\+\_\+y)\label{classSDFMap_ac2a2c96cd9d11c2cf7152cda64ae1052}
+
+\item 
+\hypertarget{classSDFMap_af0b73a27f03e26a3f738b6bb0e55e926}{}{\footnotesize template$<$class L $>$ }\\void {\bfseries apply} (L func)\label{classSDFMap_af0b73a27f03e26a3f738b6bb0e55e926}
+
+\item 
+\hypertarget{classSDFMap_a98631ea5eb46630e16093775de355ca7}{}{\footnotesize template$<$class O\+M , class L $>$ }\\void {\bfseries apply} (O\+M \&other, L func)\label{classSDFMap_a98631ea5eb46630e16093775de355ca7}
+
+\item 
+\hypertarget{classSDFMap_aa7ce3dbb03d40b7061fd4d7f1d065269}{}{\footnotesize template$<$class L $>$ }\\void {\bfseries for\+\_\+each} (L func)\label{classSDFMap_aa7ce3dbb03d40b7061fd4d7f1d065269}
+
+\item 
+\hypertarget{classSDFMap_a0130182b571a1f30b3d7c5a150b50095}{}{\footnotesize template$<$class O\+M , class L $>$ }\\void {\bfseries blit} (O\+M \&other, unsigned this\+\_\+x, unsigned this\+\_\+y, unsigned other\+\_\+x, unsigned other\+\_\+y, unsigned size\+\_\+x, unsigned size\+\_\+y, L func)\label{classSDFMap_a0130182b571a1f30b3d7c5a150b50095}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSDFMap_a18c054fb1d5e9f6aa6b7b47b8f079f82}{}void {\bfseries \+\_\+replace\+If\+Less} (int x, int y, F x2, F y2, F size)\label{classSDFMap_a18c054fb1d5e9f6aa6b7b47b8f079f82}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSDFMap_a312dd49c6beadcc44326fa56c0bfda81}{}unsigned {\bfseries \+\_\+width}\label{classSDFMap_a312dd49c6beadcc44326fa56c0bfda81}
+
+\item 
+\hypertarget{classSDFMap_abcd6404b0c970be876597f00126b3b15}{}unsigned {\bfseries \+\_\+height}\label{classSDFMap_abcd6404b0c970be876597f00126b3b15}
+
+\item 
+\hypertarget{classSDFMap_a024fee6c39dc64bb064db2db351acb93}{}\hyperlink{structSDFMap_1_1____Field}{\+\_\+\+\_\+\+Field} $\ast$ {\bfseries \+\_\+dist\+\_\+map}\label{classSDFMap_a024fee6c39dc64bb064db2db351acb93}
+
+\item 
+\hypertarget{classSDFMap_aff26b8faad5b3d795c341318380df327}{}F $\ast$ {\bfseries \+\_\+opacity}\label{classSDFMap_aff26b8faad5b3d795c341318380df327}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSDFMap_a22d0449b78e082b0fefe3b8be1607226}{}{\footnotesize template$<$class A , A($\ast$)(\+A, A) fn$>$ }\\class {\bfseries S\+D\+F\+Map}\label{classSDFMap_a22d0449b78e082b0fefe3b8be1607226}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+sdf\+\_\+map.\+h\end{DoxyCompactItemize}

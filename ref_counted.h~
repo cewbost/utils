@@ -52,8 +52,8 @@ class RefCounted
 {
 private:
 
-  mutable unsigned short _refcount;
-  mutable unsigned short _weakrefcount;
+  unsigned short _refcount;
+  unsigned short _weakrefcount;
 
 public:
 
@@ -67,8 +67,8 @@ public:
     _weakrefcount = 0;
   }
 
-  unsigned short getRefCount()const{return _refcount;}
-  unsigned short getWeakRefCount()const{return _weakrefcount;}
+  unsigned short getRefCount(){return _refcount;}
+  unsigned short getWeakRefCount(){return _weakrefcount;}
   
   template<class T>
   friend class counted_ptr;

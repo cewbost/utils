@@ -1,0 +1,92 @@
+\hypertarget{classIntrusiveList}{}\section{Intrusive\+List$<$ Y, N, T $>$ Class Template Reference}
+\label{classIntrusiveList}\index{Intrusive\+List$<$ Y, N, T $>$@{Intrusive\+List$<$ Y, N, T $>$}}
+
+
+intrusive list class  
+
+
+
+
+{\ttfamily \#include $<$intrusive\+\_\+list.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structIntrusiveList_1_1iterator}{iterator}
+\begin{DoxyCompactList}\small\item\em forward iterator, derives from iterator\+\_\+base \end{DoxyCompactList}\item 
+struct \hyperlink{structIntrusiveList_1_1reverse__iterator}{reverse\+\_\+iterator}
+\begin{DoxyCompactList}\small\item\em reverse iterator, derives from iterator\+\_\+base \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classIntrusiveList_a336cc31d72aa71a54ae03d0041bed225}{}\hyperlink{structIntrusiveList_1_1iterator}{iterator} {\bfseries begin} ()\label{classIntrusiveList_a336cc31d72aa71a54ae03d0041bed225}
+
+\item 
+\hypertarget{classIntrusiveList_afa4b078624ef59abf461fb0985bfa840}{}\hyperlink{structIntrusiveList_1_1iterator}{iterator} {\bfseries end} ()\label{classIntrusiveList_afa4b078624ef59abf461fb0985bfa840}
+
+\item 
+\hypertarget{classIntrusiveList_a0c0857a3e1a7fb32b4ce36ad25a49b6f}{}\hyperlink{structIntrusiveList_1_1iterator}{iterator} \hyperlink{classIntrusiveList_a0c0857a3e1a7fb32b4ce36ad25a49b6f}{last} ()\label{classIntrusiveList_a0c0857a3e1a7fb32b4ce36ad25a49b6f}
+
+\begin{DoxyCompactList}\small\item\em returns a forward iterator to the last element(one before end()). \end{DoxyCompactList}\item 
+\hypertarget{classIntrusiveList_aa3c78a96b6ee696d5e7ae4e917d13793}{}\hyperlink{structIntrusiveList_1_1reverse__iterator}{reverse\+\_\+iterator} {\bfseries rbegin} ()\label{classIntrusiveList_aa3c78a96b6ee696d5e7ae4e917d13793}
+
+\item 
+\hypertarget{classIntrusiveList_ab065d0b937dc9cc61a7d2fad9145bb4b}{}\hyperlink{structIntrusiveList_1_1reverse__iterator}{reverse\+\_\+iterator} {\bfseries rend} ()\label{classIntrusiveList_ab065d0b937dc9cc61a7d2fad9145bb4b}
+
+\item 
+\hypertarget{classIntrusiveList_a4ce874e13f50d78ef3938a131a0d2e07}{}void {\bfseries push\+\_\+back} (T \&obj)\label{classIntrusiveList_a4ce874e13f50d78ef3938a131a0d2e07}
+
+\item 
+\hypertarget{classIntrusiveList_a04263b1edddb7540730265e37df2d1e7}{}void {\bfseries push\+\_\+front} (T \&obj)\label{classIntrusiveList_a04263b1edddb7540730265e37df2d1e7}
+
+\item 
+\hypertarget{classIntrusiveList_aba2254407f426a97c33d2b12ee89c76d}{}void {\bfseries pop\+\_\+back} ()\label{classIntrusiveList_aba2254407f426a97c33d2b12ee89c76d}
+
+\item 
+\hypertarget{classIntrusiveList_a179fb596c43dbfaed05c29ec00742684}{}void {\bfseries pop\+\_\+front} ()\label{classIntrusiveList_a179fb596c43dbfaed05c29ec00742684}
+
+\item 
+\hypertarget{classIntrusiveList_a8e350ac902999c48924654de8875b2fa}{}T $\ast$ {\bfseries front} () const \label{classIntrusiveList_a8e350ac902999c48924654de8875b2fa}
+
+\item 
+\hypertarget{classIntrusiveList_aa2156fd9367a6db106fc7ac081bece7b}{}T $\ast$ {\bfseries back} () const \label{classIntrusiveList_aa2156fd9367a6db106fc7ac081bece7b}
+
+\item 
+\hypertarget{classIntrusiveList_a7a2d8a89faa7a5b92c783d1cf373a346}{}void {\bfseries clear} ()\label{classIntrusiveList_a7a2d8a89faa7a5b92c783d1cf373a346}
+
+\item 
+\hypertarget{classIntrusiveList_af3f0bf57760bb4ca7c15fd4f2e93f731}{}bool {\bfseries empty} ()\label{classIntrusiveList_af3f0bf57760bb4ca7c15fd4f2e93f731}
+
+\item 
+\hypertarget{classIntrusiveList_aaf2c0152fd8d0e24cd302099eddb19ca}{}int {\bfseries size} ()\label{classIntrusiveList_aaf2c0152fd8d0e24cd302099eddb19ca}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classIntrusiveList_a6c65e0b9c6c08b0cd94dd470602f8b7b}{}\hyperlink{structIntrusiveNode}{Intrusive\+Node} \hyperlink{classIntrusiveList_a6c65e0b9c6c08b0cd94dd470602f8b7b}{head}\label{classIntrusiveList_a6c65e0b9c6c08b0cd94dd470602f8b7b}
+
+\begin{DoxyCompactList}\small\item\em head node \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Y, Intrusive\+Node Y\+::$\ast$ N, class T = Y$>$class Intrusive\+List$<$ Y, N, T $>$}
+
+intrusive list class 
+
+This class contains the head node of a list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Y} & class containing the list node \\
+\hline
+{\em N} & member pointer to node in param \\
+\hline
+{\em T} & value type. Must be derived from Y. Default\+: Y \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{intrusive__list_8h}{intrusive\+\_\+list.\+h}\end{DoxyCompactItemize}

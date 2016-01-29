@@ -1,0 +1,138 @@
+\hypertarget{classcounted__ptr}{}\section{counted\+\_\+ptr$<$ T $>$ Class Template Reference}
+\label{classcounted__ptr}\index{counted\+\_\+ptr$<$ T $>$@{counted\+\_\+ptr$<$ T $>$}}
+
+
+Smart pointer that does reference counting.  
+
+
+
+
+{\ttfamily \#include $<$ref\+\_\+counted.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcounted__ptr_ab7dea9d92b16a77c7611e86200b6bb0e}{}{\bfseries counted\+\_\+ptr} (const \hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ T $>$ \&other)\label{classcounted__ptr_ab7dea9d92b16a77c7611e86200b6bb0e}
+
+\item 
+\hypertarget{classcounted__ptr_a43f26afa7273683978d154efa0449360}{}{\bfseries counted\+\_\+ptr} (\hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ T $>$ \&\&other)\label{classcounted__ptr_a43f26afa7273683978d154efa0449360}
+
+\item 
+\hypertarget{classcounted__ptr_a2bb70ee91e76f9b07b237e22b88f329a}{}{\bfseries counted\+\_\+ptr} (T $\ast$other)\label{classcounted__ptr_a2bb70ee91e76f9b07b237e22b88f329a}
+
+\item 
+\hypertarget{classcounted__ptr_a60c0639256b2f8ed72e5c3a4cbe6ee69}{}{\bfseries counted\+\_\+ptr} (std\+::nullptr\+\_\+t null)\label{classcounted__ptr_a60c0639256b2f8ed72e5c3a4cbe6ee69}
+
+\item 
+\hypertarget{classcounted__ptr_a610bf3d74d1ade9fc47be78e83dfd6c3}{}{\footnotesize template$<$class Y $>$ }\\{\bfseries counted\+\_\+ptr} (Y $\ast$other)\label{classcounted__ptr_a610bf3d74d1ade9fc47be78e83dfd6c3}
+
+\item 
+\hypertarget{classcounted__ptr_a80d5131a8e2c5fa14a7205552b80dc30}{}{\footnotesize template$<$class Y $>$ }\\{\bfseries counted\+\_\+ptr} (const \hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ Y $>$ \&other)\label{classcounted__ptr_a80d5131a8e2c5fa14a7205552b80dc30}
+
+\item 
+\hypertarget{classcounted__ptr_a3aaa7afdb2b63f57c7f87338128d0118}{}{\footnotesize template$<$class Y $>$ }\\\hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ T $>$ \& {\bfseries operator=} (Y $\ast$other)\label{classcounted__ptr_a3aaa7afdb2b63f57c7f87338128d0118}
+
+\item 
+\hypertarget{classcounted__ptr_adcad455fbcaf0d86804486d376baad85}{}{\footnotesize template$<$class Y $>$ }\\\hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ T $>$ \& {\bfseries operator=} (const \hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ Y $>$ \&other)\label{classcounted__ptr_adcad455fbcaf0d86804486d376baad85}
+
+\item 
+\hypertarget{classcounted__ptr_adbba342c0e758d3999d2fb76e0f2a46c}{}\hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ T $>$ \& {\bfseries operator=} (\hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ T $>$ \&\&other)\label{classcounted__ptr_adbba342c0e758d3999d2fb76e0f2a46c}
+
+\item 
+\hypertarget{classcounted__ptr_ace1f4bb25259ab1421c4c46ecd6ed447}{}\hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ T $>$ \& {\bfseries operator=} (std\+::nullptr\+\_\+t)\label{classcounted__ptr_ace1f4bb25259ab1421c4c46ecd6ed447}
+
+\item 
+\hypertarget{classcounted__ptr_aaf76392f6b0fd5010644fe3d4cac1fd6}{}T \& {\bfseries operator$\ast$} ()\label{classcounted__ptr_aaf76392f6b0fd5010644fe3d4cac1fd6}
+
+\item 
+\hypertarget{classcounted__ptr_a11cc57380df68abd9f191076612e771d}{}T $\ast$ {\bfseries operator-\/$>$} ()\label{classcounted__ptr_a11cc57380df68abd9f191076612e771d}
+
+\item 
+\hypertarget{classcounted__ptr_a1b539cc48749971c7cba3324b0beb74c}{}bool {\bfseries operator==} (const \hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ T $>$ \&other) const \label{classcounted__ptr_a1b539cc48749971c7cba3324b0beb74c}
+
+\item 
+\hypertarget{classcounted__ptr_aa4760363573ce12e0311e55f6c47fac9}{}bool {\bfseries operator!=} (const \hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ T $>$ \&other) const \label{classcounted__ptr_aa4760363573ce12e0311e55f6c47fac9}
+
+\item 
+\hypertarget{classcounted__ptr_a7856a4c20c73443d5e1fc4cd7ad79ad8}{}bool {\bfseries operator==} (T $\ast$other) const \label{classcounted__ptr_a7856a4c20c73443d5e1fc4cd7ad79ad8}
+
+\item 
+\hypertarget{classcounted__ptr_ae82469dbfbf5563eaaa0822cee2d38d1}{}bool {\bfseries operator!=} (T $\ast$other) const \label{classcounted__ptr_ae82469dbfbf5563eaaa0822cee2d38d1}
+
+\item 
+\hypertarget{classcounted__ptr_a29dcb00457a0cac907bd12b7dfd206e3}{}bool {\bfseries operator==} (std\+::nullptr\+\_\+t) const \label{classcounted__ptr_a29dcb00457a0cac907bd12b7dfd206e3}
+
+\item 
+\hypertarget{classcounted__ptr_a5e370712d723f94cd71404b87342a7fd}{}bool {\bfseries operator!=} (std\+::nullptr\+\_\+t) const \label{classcounted__ptr_a5e370712d723f94cd71404b87342a7fd}
+
+\item 
+\hypertarget{classcounted__ptr_af78f6ab8e8fbb783e2d247a3114f6f46}{}{\footnotesize template$<$class Y $>$ }\\{\bfseries operator Y} () const \label{classcounted__ptr_af78f6ab8e8fbb783e2d247a3114f6f46}
+
+\item 
+\hypertarget{classcounted__ptr_ae3a2ff3bd87764f41dd7a617a4379272}{}{\bfseries operator bool} () const \label{classcounted__ptr_ae3a2ff3bd87764f41dd7a617a4379272}
+
+\item 
+\hypertarget{classcounted__ptr_a5a33e60661ce46ce72cdbd76a2905260}{}T $\ast$ \hyperlink{classcounted__ptr_a5a33e60661ce46ce72cdbd76a2905260}{get} () const \label{classcounted__ptr_a5a33e60661ce46ce72cdbd76a2905260}
+
+\begin{DoxyCompactList}\small\item\em Returns the underlying pointer. \end{DoxyCompactList}\item 
+\hypertarget{classcounted__ptr_aa5ea349f9d867155d7b913c02cbea3c2}{}void {\bfseries swap} (\hyperlink{classcounted__ptr}{counted\+\_\+ptr}$<$ T $>$ \&other)\label{classcounted__ptr_aa5ea349f9d867155d7b913c02cbea3c2}
+
+\item 
+\hypertarget{classcounted__ptr_a0c38418e48610ae1573fbb1925147cae}{}\hyperlink{classcounted__weak__ptr}{counted\+\_\+weak\+\_\+ptr}$<$ T $>$ \hyperlink{classcounted__ptr_a0c38418e48610ae1573fbb1925147cae}{weak} ()\label{classcounted__ptr_a0c38418e48610ae1573fbb1925147cae}
+
+\begin{DoxyCompactList}\small\item\em Returns a weak pointer to the pointed-\/to object. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{classcounted__ptr_aecac87c17317e856c29abc4cfa9008b6}{get\+Ref\+Count} ()
+\begin{DoxyCompactList}\small\item\em Gets the reference count. \end{DoxyCompactList}\item 
+unsigned short \hyperlink{classcounted__ptr_ae0e614c95ef7064b0d6c73fe148e8afd}{get\+Weak\+Ref\+Count} ()
+\begin{DoxyCompactList}\small\item\em Gets the weak reference count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class counted\+\_\+ptr$<$ T $>$}
+
+Smart pointer that does reference counting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & value type, must inherit from \hyperlink{classRefCounted}{Ref\+Counted} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Do not assign objects to this pointer unless they are allocated with new 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classcounted__ptr_aecac87c17317e856c29abc4cfa9008b6}{}\index{counted\+\_\+ptr@{counted\+\_\+ptr}!get\+Ref\+Count@{get\+Ref\+Count}}
+\index{get\+Ref\+Count@{get\+Ref\+Count}!counted\+\_\+ptr@{counted\+\_\+ptr}}
+\subsubsection[{get\+Ref\+Count}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ unsigned short {\bf counted\+\_\+ptr}$<$ T $>$\+::get\+Ref\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classcounted__ptr_aecac87c17317e856c29abc4cfa9008b6}
+
+
+Gets the reference count. 
+
+\begin{DoxyReturn}{Returns}
+The reference count of the pointed-\/to object or 0 if the pointer is null. 
+\end{DoxyReturn}
+\hypertarget{classcounted__ptr_ae0e614c95ef7064b0d6c73fe148e8afd}{}\index{counted\+\_\+ptr@{counted\+\_\+ptr}!get\+Weak\+Ref\+Count@{get\+Weak\+Ref\+Count}}
+\index{get\+Weak\+Ref\+Count@{get\+Weak\+Ref\+Count}!counted\+\_\+ptr@{counted\+\_\+ptr}}
+\subsubsection[{get\+Weak\+Ref\+Count}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ unsigned short {\bf counted\+\_\+ptr}$<$ T $>$\+::get\+Weak\+Ref\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classcounted__ptr_ae0e614c95ef7064b0d6c73fe148e8afd}
+
+
+Gets the weak reference count. 
+
+\begin{DoxyReturn}{Returns}
+The weak reference count of the pointed-\/to object or 0 if the pointer is null. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ref__counted_8h}{ref\+\_\+counted.\+h}\end{DoxyCompactItemize}

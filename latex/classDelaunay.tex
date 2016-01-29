@@ -1,0 +1,477 @@
+\hypertarget{classDelaunay}{}\section{Delaunay$<$ T $>$ Class Template Reference}
+\label{classDelaunay}\index{Delaunay$<$ T $>$@{Delaunay$<$ T $>$}}
+
+
+{\ttfamily \#include $<$delaunay.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDelaunay}{Delaunay}$<$ T $>$ \& \hyperlink{classDelaunay_a86f2c0124e6326aa9b73b3bf472818e8}{vertices} (const T $\ast$beg, const T $\ast$end)
+\begin{DoxyCompactList}\small\item\em specifies the set of vertices \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay}{Delaunay}$<$ T $>$ \& \hyperlink{classDelaunay_a9ca7e6d7b2b218dad444db23b929d694}{vertices} (typename std\+::vector$<$ T $>$\+::const\+\_\+iterator beg, typename std\+::vector$<$ T $>$\+::const\+\_\+iterator end)
+\begin{DoxyCompactList}\small\item\em specifies the set of vertices \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay}{Delaunay}$<$ T $>$ \& \hyperlink{classDelaunay_a0cbb2dd64104569381f94772b498cbd2}{vertices} (const std\+::vector$<$ T $>$ \&verts)
+\begin{DoxyCompactList}\small\item\em specifies the set of vertices \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay}{Delaunay}$<$ T $>$ \& \hyperlink{classDelaunay_acfb314c74b4ad94b280e23fcb7b06a55}{constraints} (const int $\ast$beg, const int $\ast$end)
+\begin{DoxyCompactList}\small\item\em specifies constraints for triangulation \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay}{Delaunay}$<$ T $>$ \& \hyperlink{classDelaunay_affc039ffdefcfbe4edf3f68738cd7855}{constraints} (typename std\+::vector$<$ int $>$\+::const\+\_\+iterator beg, typename std\+::vector$<$ int $>$\+::const\+\_\+iterator end)
+\begin{DoxyCompactList}\small\item\em specifies constraints for triangulation \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay}{Delaunay}$<$ T $>$ \& \hyperlink{classDelaunay_a063efe9699418760aa756db7eaf554bf}{constraints} (const std\+::vector$<$ int $>$ \&cons)
+\begin{DoxyCompactList}\small\item\em specifies constraints for triangulation \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay}{Delaunay}$<$ T $>$ \& \hyperlink{classDelaunay_a5f3b53cb70599e3bda45a4eedc7a68d5}{triangulate} ()
+\begin{DoxyCompactList}\small\item\em performs the triangulation \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{classDelaunay_ac9a4976cb0710e33009a3162361f2cc8}{edges} ()
+\begin{DoxyCompactList}\small\item\em returns list of vertex indices \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{classDelaunay_a1533d92a2ba20c15e3c28982aeb70992}{triangles} ()
+\begin{DoxyCompactList}\small\item\em returns list of vertex indices \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay_a99e2fb8c6774b84fe85deb87191bc6f4}{Delaunay} (const T $\ast$beg, const T $\ast$end, bool b=false)
+\begin{DoxyCompactList}\small\item\em constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex range \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay_a22bd2799bb9541ea8e8f60be2c1b6a65}{Delaunay} (const T $\ast$beg, const T $\ast$end, const int $\ast$c\+\_\+beg, const int $\ast$c\+\_\+end, bool b=false)
+\begin{DoxyCompactList}\small\item\em constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex and constraint range \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay_af6c3c79ae6c3cf7925bb2e4bc0fd3d4b}{Delaunay} (typename std\+::vector$<$ T $>$\+::const\+\_\+iterator beg, typename std\+::vector$<$ T $>$\+::const\+\_\+iterator end, bool b=false)
+\begin{DoxyCompactList}\small\item\em constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex range \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay_a313655245cae6fc5bc0f1b1d24954637}{Delaunay} (typename std\+::vector$<$ T $>$\+::const\+\_\+iterator beg, typename std\+::vector$<$ T $>$\+::const\+\_\+iterator end, typename std\+::vector$<$ int $>$\+::const\+\_\+iterator c\+\_\+beg, typename std\+::vector$<$ int $>$\+::const\+\_\+iterator c\+\_\+end, bool b=false)
+\begin{DoxyCompactList}\small\item\em constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex and constraint range \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay_a8fac97cf626be17739f0f6b299592717}{Delaunay} (const std\+::vector$<$ T $>$ \&verts, bool b=false)
+\begin{DoxyCompactList}\small\item\em constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex range \end{DoxyCompactList}\item 
+\hyperlink{classDelaunay_a309cee8815a537fff9126d7d00b29f52}{Delaunay} (const std\+::vector$<$ T $>$ \&verts, const std\+::vector$<$ int $>$ \&cons, bool b=false)
+\begin{DoxyCompactList}\small\item\em constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex range \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDelaunay_a519e2d6f788edb28dfbc7706c3aa41f3}{}\+\_\+\+\_\+\+Coords {\bfseries operator+} (\+\_\+\+\_\+\+Coords a, \+\_\+\+\_\+\+Coords b)\label{classDelaunay_a519e2d6f788edb28dfbc7706c3aa41f3}
+
+\item 
+\hypertarget{classDelaunay_ab5619bbc75261afb8501c9e34c706178}{}\+\_\+\+\_\+\+Coords {\bfseries operator-\/} (\+\_\+\+\_\+\+Coords a, \+\_\+\+\_\+\+Coords b)\label{classDelaunay_ab5619bbc75261afb8501c9e34c706178}
+
+\item 
+\hypertarget{classDelaunay_ab7c4f5896d09f2473dcc05282db7d7f4}{}\+\_\+\+\_\+\+Coords {\bfseries operator$\ast$} (\+\_\+\+\_\+\+Coords a, int b)\label{classDelaunay_ab7c4f5896d09f2473dcc05282db7d7f4}
+
+\item 
+\hypertarget{classDelaunay_a7ff09550d60e4426f531e9d6c244a22e}{}\+\_\+\+\_\+\+Coords {\bfseries operator/} (\+\_\+\+\_\+\+Coords a, int b)\label{classDelaunay_a7ff09550d60e4426f531e9d6c244a22e}
+
+\item 
+\hypertarget{classDelaunay_a475a0813ed7310b894ca858b87e33eab}{}\+\_\+\+\_\+\+Coords {\bfseries operator$\ast$} (\+\_\+\+\_\+\+Coords a, double b)\label{classDelaunay_a475a0813ed7310b894ca858b87e33eab}
+
+\item 
+\hypertarget{classDelaunay_a83f89104d222fe9e6cb7d666b580b030}{}\+\_\+\+\_\+\+Coords {\bfseries operator/} (\+\_\+\+\_\+\+Coords a, double b)\label{classDelaunay_a83f89104d222fe9e6cb7d666b580b030}
+
+\item 
+\hypertarget{classDelaunay_a753a1dad56ee851d7a5e626b90dcb793}{}\+\_\+\+\_\+\+Coords {\bfseries \+\_\+turn90d} (\+\_\+\+\_\+\+Coords v)\label{classDelaunay_a753a1dad56ee851d7a5e626b90dcb793}
+
+\item 
+\hypertarget{classDelaunay_a6fadd8b413cc1d3b91cb3bc5143d3970}{}T {\bfseries \+\_\+dot\+Product} (\+\_\+\+\_\+\+Coords a, \+\_\+\+\_\+\+Coords b)\label{classDelaunay_a6fadd8b413cc1d3b91cb3bc5143d3970}
+
+\item 
+\hypertarget{classDelaunay_a11d8a4cf5f1815737a5d5b306059cf1a}{}T {\bfseries \+\_\+distance} (\+\_\+\+\_\+\+Coords a, \+\_\+\+\_\+\+Coords b)\label{classDelaunay_a11d8a4cf5f1815737a5d5b306059cf1a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$class Delaunay$<$ T $>$}
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & value type \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classDelaunay_a99e2fb8c6774b84fe85deb87191bc6f4}{}\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\subsubsection[{Delaunay}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$ T $>$\+::{\bf Delaunay} (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{beg, }
+\item[{const T $\ast$}]{end, }
+\item[{bool}]{b = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_a99e2fb8c6774b84fe85deb87191bc6f4}
+
+
+constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex range 
+
+
+\begin{DoxyParams}{Parameters}
+{\em beg} & pointer to the first vertex \\
+\hline
+{\em end} & pointer past the end of the range \\
+\hline
+{\em b} & perform triangulation immediately. default\+: false\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+see vertices 
+\end{DoxyNote}
+\hypertarget{classDelaunay_a22bd2799bb9541ea8e8f60be2c1b6a65}{}\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\subsubsection[{Delaunay}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$ T $>$\+::{\bf Delaunay} (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{beg, }
+\item[{const T $\ast$}]{end, }
+\item[{const int $\ast$}]{c\+\_\+beg, }
+\item[{const int $\ast$}]{c\+\_\+end, }
+\item[{bool}]{b = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_a22bd2799bb9541ea8e8f60be2c1b6a65}
+
+
+constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex and constraint range 
+
+
+\begin{DoxyParams}{Parameters}
+{\em beg} & pointer to the first vertex \\
+\hline
+{\em end} & pointer past the end of the range \\
+\hline
+{\em c\+\_\+beg} & pointer to the first index \\
+\hline
+{\em c\+\_\+end} & pointer past the end of the range \\
+\hline
+{\em b} & perform triangulation immediately. default\+: false\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+see vertices, constraints 
+\end{DoxyNote}
+\hypertarget{classDelaunay_af6c3c79ae6c3cf7925bb2e4bc0fd3d4b}{}\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\subsubsection[{Delaunay}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$ T $>$\+::{\bf Delaunay} (
+\begin{DoxyParamCaption}
+\item[{typename std\+::vector$<$ T $>$\+::const\+\_\+iterator}]{beg, }
+\item[{typename std\+::vector$<$ T $>$\+::const\+\_\+iterator}]{end, }
+\item[{bool}]{b = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_af6c3c79ae6c3cf7925bb2e4bc0fd3d4b}
+
+
+constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex range 
+
+
+\begin{DoxyParams}{Parameters}
+{\em beg} & iterator to the first vertex \\
+\hline
+{\em end} & iterator past the end of the range \\
+\hline
+{\em b} & perform triangulation immediately. default\+: false\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+see vertices 
+\end{DoxyNote}
+\hypertarget{classDelaunay_a313655245cae6fc5bc0f1b1d24954637}{}\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\subsubsection[{Delaunay}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$ T $>$\+::{\bf Delaunay} (
+\begin{DoxyParamCaption}
+\item[{typename std\+::vector$<$ T $>$\+::const\+\_\+iterator}]{beg, }
+\item[{typename std\+::vector$<$ T $>$\+::const\+\_\+iterator}]{end, }
+\item[{typename std\+::vector$<$ int $>$\+::const\+\_\+iterator}]{c\+\_\+beg, }
+\item[{typename std\+::vector$<$ int $>$\+::const\+\_\+iterator}]{c\+\_\+end, }
+\item[{bool}]{b = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_a313655245cae6fc5bc0f1b1d24954637}
+
+
+constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex and constraint range 
+
+
+\begin{DoxyParams}{Parameters}
+{\em beg} & iterator to the first vertex \\
+\hline
+{\em end} & iterator past the end of the range \\
+\hline
+{\em c\+\_\+beg} & iterator to the first index \\
+\hline
+{\em c\+\_\+end} & iterator past the end of the range \\
+\hline
+{\em b} & perform triangulation immediately. default\+: false\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+see vertices, constraints 
+\end{DoxyNote}
+\hypertarget{classDelaunay_a8fac97cf626be17739f0f6b299592717}{}\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\subsubsection[{Delaunay}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$ T $>$\+::{\bf Delaunay} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T $>$ \&}]{verts, }
+\item[{bool}]{b = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_a8fac97cf626be17739f0f6b299592717}
+
+
+constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex range 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verts} & std\+::vector containing vertices \\
+\hline
+{\em b} & perform triangulation immediately. default\+: false\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+see vertices 
+\end{DoxyNote}
+\hypertarget{classDelaunay_a309cee8815a537fff9126d7d00b29f52}{}\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\index{Delaunay@{Delaunay}!Delaunay@{Delaunay}}
+\subsubsection[{Delaunay}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$ T $>$\+::{\bf Delaunay} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T $>$ \&}]{verts, }
+\item[{const std\+::vector$<$ int $>$ \&}]{cons, }
+\item[{bool}]{b = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_a309cee8815a537fff9126d7d00b29f52}
+
+
+constructs \hyperlink{classDelaunay}{Delaunay} object and assigns vertex range 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verts} & vector containing vertices \\
+\hline
+{\em cons} & vector containing vertex indices \\
+\hline
+{\em b} & perform triangulation immediately. default\+: false\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+see vertices 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classDelaunay_acfb314c74b4ad94b280e23fcb7b06a55}{}\index{Delaunay@{Delaunay}!constraints@{constraints}}
+\index{constraints@{constraints}!Delaunay@{Delaunay}}
+\subsubsection[{constraints}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$T$>$\& {\bf Delaunay}$<$ T $>$\+::constraints (
+\begin{DoxyParamCaption}
+\item[{const int $\ast$}]{beg, }
+\item[{const int $\ast$}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_acfb314c74b4ad94b280e23fcb7b06a55}
+
+
+specifies constraints for triangulation 
+
+the constraints must be stored contiguously in memory as pairs of vertex indices
+
+
+\begin{DoxyParams}{Parameters}
+{\em beg} & pointer to the first index \\
+\hline
+{\em end} & pointer past the end of the range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this object
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+passing a range of length not divisible by 2 will likely break something 
+\end{DoxyNote}
+\hypertarget{classDelaunay_affc039ffdefcfbe4edf3f68738cd7855}{}\index{Delaunay@{Delaunay}!constraints@{constraints}}
+\index{constraints@{constraints}!Delaunay@{Delaunay}}
+\subsubsection[{constraints}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$T$>$\& {\bf Delaunay}$<$ T $>$\+::constraints (
+\begin{DoxyParamCaption}
+\item[{typename std\+::vector$<$ int $>$\+::const\+\_\+iterator}]{beg, }
+\item[{typename std\+::vector$<$ int $>$\+::const\+\_\+iterator}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_affc039ffdefcfbe4edf3f68738cd7855}
+
+
+specifies constraints for triangulation 
+
+the constraints must be stored contiguously in memory as pairs of vertex indices
+
+
+\begin{DoxyParams}{Parameters}
+{\em beg} & iterator to the first index \\
+\hline
+{\em end} & iterator past the end of the range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this object
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+passing a range of length not divisible by 2 will likely break something 
+\end{DoxyNote}
+\hypertarget{classDelaunay_a063efe9699418760aa756db7eaf554bf}{}\index{Delaunay@{Delaunay}!constraints@{constraints}}
+\index{constraints@{constraints}!Delaunay@{Delaunay}}
+\subsubsection[{constraints}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$T$>$\& {\bf Delaunay}$<$ T $>$\+::constraints (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{cons}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_a063efe9699418760aa756db7eaf554bf}
+
+
+specifies constraints for triangulation 
+
+the constraints must be stored contiguously in memory as pairs of vertex indices
+
+
+\begin{DoxyParams}{Parameters}
+{\em cons} & vector containing vertex indices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this object
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+passing a range of length not divisible by 2 will likely break something 
+\end{DoxyNote}
+\hypertarget{classDelaunay_ac9a4976cb0710e33009a3162361f2cc8}{}\index{Delaunay@{Delaunay}!edges@{edges}}
+\index{edges@{edges}!Delaunay@{Delaunay}}
+\subsubsection[{edges}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ std\+::vector$<$int$>$ {\bf Delaunay}$<$ T $>$\+::edges (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_ac9a4976cb0710e33009a3162361f2cc8}
+
+
+returns list of vertex indices 
+
+the returned vector will contain the edges of the triangulation as index pairs
+
+\begin{DoxyReturn}{Returns}
+vector containing vertex index pairs 
+\end{DoxyReturn}
+\hypertarget{classDelaunay_a1533d92a2ba20c15e3c28982aeb70992}{}\index{Delaunay@{Delaunay}!triangles@{triangles}}
+\index{triangles@{triangles}!Delaunay@{Delaunay}}
+\subsubsection[{triangles}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ std\+::vector$<$int$>$ {\bf Delaunay}$<$ T $>$\+::triangles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_a1533d92a2ba20c15e3c28982aeb70992}
+
+
+returns list of vertex indices 
+
+the returned vector will contain the triangles of the triangulation as integer triplets
+
+\begin{DoxyReturn}{Returns}
+vector containing vertex index triplets 
+\end{DoxyReturn}
+\hypertarget{classDelaunay_a5f3b53cb70599e3bda45a4eedc7a68d5}{}\index{Delaunay@{Delaunay}!triangulate@{triangulate}}
+\index{triangulate@{triangulate}!Delaunay@{Delaunay}}
+\subsubsection[{triangulate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$T$>$\& {\bf Delaunay}$<$ T $>$\+::triangulate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_a5f3b53cb70599e3bda45a4eedc7a68d5}
+
+
+performs the triangulation 
+
+this is where the magic happens
+
+\begin{DoxyReturn}{Returns}
+reference to this object 
+\end{DoxyReturn}
+another function object for calculating angle coefficients
+
+initial triangulation
+
+main triangulation loop
+
+find lowest
+
+sewing loop
+
+find candidates
+
+sew together \hypertarget{classDelaunay_a86f2c0124e6326aa9b73b3bf472818e8}{}\index{Delaunay@{Delaunay}!vertices@{vertices}}
+\index{vertices@{vertices}!Delaunay@{Delaunay}}
+\subsubsection[{vertices}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$T$>$\& {\bf Delaunay}$<$ T $>$\+::vertices (
+\begin{DoxyParamCaption}
+\item[{const T $\ast$}]{beg, }
+\item[{const T $\ast$}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_a86f2c0124e6326aa9b73b3bf472818e8}
+
+
+specifies the set of vertices 
+
+vertices must be stored contiguously in memory as pairs of T
+
+
+\begin{DoxyParams}{Parameters}
+{\em beg} & pointer to the first vertex \\
+\hline
+{\em end} & pointer past the end of the range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this object
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+calling this function will remove constraints 
+
+passing a range shorter than 3 vertex pairs will likely break something 
+
+passing a range of length not divisible by 2 will likely break something 
+\end{DoxyNote}
+\hypertarget{classDelaunay_a9ca7e6d7b2b218dad444db23b929d694}{}\index{Delaunay@{Delaunay}!vertices@{vertices}}
+\index{vertices@{vertices}!Delaunay@{Delaunay}}
+\subsubsection[{vertices}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$T$>$\& {\bf Delaunay}$<$ T $>$\+::vertices (
+\begin{DoxyParamCaption}
+\item[{typename std\+::vector$<$ T $>$\+::const\+\_\+iterator}]{beg, }
+\item[{typename std\+::vector$<$ T $>$\+::const\+\_\+iterator}]{end}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_a9ca7e6d7b2b218dad444db23b929d694}
+
+
+specifies the set of vertices 
+
+vertices must be stored contiguously in memory as pairs of T
+
+
+\begin{DoxyParams}{Parameters}
+{\em beg} & iterator to the first vertex \\
+\hline
+{\em end} & iterator past the end of the range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this object
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+calling this function will remove constraints 
+
+passing a range shorter than 3 vertex pairs will likely break something 
+
+passing a range of length not divisible by 2 will likely break something 
+\end{DoxyNote}
+\hypertarget{classDelaunay_a0cbb2dd64104569381f94772b498cbd2}{}\index{Delaunay@{Delaunay}!vertices@{vertices}}
+\index{vertices@{vertices}!Delaunay@{Delaunay}}
+\subsubsection[{vertices}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Delaunay}$<$T$>$\& {\bf Delaunay}$<$ T $>$\+::vertices (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T $>$ \&}]{verts}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classDelaunay_a0cbb2dd64104569381f94772b498cbd2}
+
+
+specifies the set of vertices 
+
+vertices must be stored contiguously in memory as pairs of T
+
+
+\begin{DoxyParams}{Parameters}
+{\em verts} & vector containing vertices \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this object
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+calling this function will remove constraints 
+
+passing a range shorter than 3 vertex pairs will likely break something 
+
+passing a range of length not divisible by 2 will likely break something 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{delaunay_8h}{delaunay.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+\hypertarget{structIntrusiveNode}{}\section{Intrusive\+Node Struct Reference}
+\label{structIntrusiveNode}\index{Intrusive\+Node@{Intrusive\+Node}}
+
+
+node struct for intrusive list  
+
+
+
+
+{\ttfamily \#include $<$intrusive\+\_\+list.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structIntrusiveNode_a5895f6ff9890770857a50e5c3f156836}{}void {\bfseries unlink} ()\label{structIntrusiveNode_a5895f6ff9890770857a50e5c3f156836}
+
+\item 
+\hypertarget{structIntrusiveNode_a74b5290c17bc39e1057509b297613419}{}void {\bfseries link\+To} (\hyperlink{structIntrusiveNode}{Intrusive\+Node} \&other)\label{structIntrusiveNode_a74b5290c17bc39e1057509b297613419}
+
+\item 
+\hypertarget{structIntrusiveNode_a2d8e30fa2e5650ced0d8d8f65cf9f6bf}{}{\bfseries Intrusive\+Node} (const \hyperlink{structIntrusiveNode}{Intrusive\+Node} \&)=delete\label{structIntrusiveNode_a2d8e30fa2e5650ced0d8d8f65cf9f6bf}
+
+\item 
+\hypertarget{structIntrusiveNode_a263eb1cff1181d332551567bf6f59902}{}{\bfseries Intrusive\+Node} (\hyperlink{structIntrusiveNode}{Intrusive\+Node} \&\&other)\label{structIntrusiveNode_a263eb1cff1181d332551567bf6f59902}
+
+\item 
+\hypertarget{structIntrusiveNode_a833aaa568b8b4e682b7581d90510b735}{}void {\bfseries operator=} (const \hyperlink{structIntrusiveNode}{Intrusive\+Node} \&)=delete\label{structIntrusiveNode_a833aaa568b8b4e682b7581d90510b735}
+
+\item 
+\hypertarget{structIntrusiveNode_a91df3d90f43b66e20de7e9c3eca9a1ee}{}void {\bfseries operator=} (\hyperlink{structIntrusiveNode}{Intrusive\+Node} \&\&other)\label{structIntrusiveNode_a91df3d90f43b66e20de7e9c3eca9a1ee}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structIntrusiveNode_a172125e7f9cd0a790cb06236f38eb446}{}\hyperlink{structIntrusiveNode}{Intrusive\+Node} $\ast$ {\bfseries next}\label{structIntrusiveNode_a172125e7f9cd0a790cb06236f38eb446}
+
+\item 
+\hypertarget{structIntrusiveNode_a22e2970070331493085f8b562cf80b88}{}\hyperlink{structIntrusiveNode}{Intrusive\+Node} $\ast$ {\bfseries previous}\label{structIntrusiveNode_a22e2970070331493085f8b562cf80b88}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+node struct for intrusive list 
+
+Declare a member of this type in a class to make it listable. Multiple nodes can be present in the same class to make it connectable to multiple lists.
+
+\begin{DoxyNote}{Note}
+Copy constructor has been disabled since the destructor automatically unlinks the node. 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{intrusive__list_8h}{intrusive\+\_\+list.\+h}\end{DoxyCompactItemize}

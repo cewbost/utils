@@ -1,0 +1,164 @@
+\hypertarget{structIntrusiveList_1_1iterator}{}\section{Intrusive\+List$<$ Y, N, T $>$\+:\+:iterator Struct Reference}
+\label{structIntrusiveList_1_1iterator}\index{Intrusive\+List$<$ Y, N, T $>$\+::iterator@{Intrusive\+List$<$ Y, N, T $>$\+::iterator}}
+
+
+forward iterator, derives from iterator\+\_\+base  
+
+
+
+
+{\ttfamily \#include $<$intrusive\+\_\+list.\+h$>$}
+
+
+
+Inherits Intrusive\+List$<$ Y, N, T $>$\+::iterator\+\_\+base.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structIntrusiveList_1_1iterator_a56645388599414892b02fb2fe98bb865}{}{\bfseries iterator} (\hyperlink{structIntrusiveNode}{Intrusive\+Node} $\ast$start)\label{structIntrusiveList_1_1iterator_a56645388599414892b02fb2fe98bb865}
+
+\item 
+\hypertarget{structIntrusiveList_1_1iterator_a491eeab030fbb3c36caef3a6d3bbda30}{}{\bfseries iterator} (const iterator\+\_\+base \&other)\label{structIntrusiveList_1_1iterator_a491eeab030fbb3c36caef3a6d3bbda30}
+
+\item 
+\hypertarget{structIntrusiveList_1_1iterator_a539c18036285ecb2ff80eb8363a8c659}{}{\bfseries iterator} (const T \&obj)\label{structIntrusiveList_1_1iterator_a539c18036285ecb2ff80eb8363a8c659}
+
+\item 
+\hypertarget{structIntrusiveList_1_1iterator_ae781c430bf59a22b408b5b5aa97d8742}{}const \hyperlink{structIntrusiveList_1_1iterator}{iterator} \& {\bfseries operator++} ()\label{structIntrusiveList_1_1iterator_ae781c430bf59a22b408b5b5aa97d8742}
+
+\item 
+\hypertarget{structIntrusiveList_1_1iterator_ae8f34d56fd60467afa958a2f3a955640}{}\hyperlink{structIntrusiveList_1_1iterator}{iterator} {\bfseries operator++} (int)\label{structIntrusiveList_1_1iterator_ae8f34d56fd60467afa958a2f3a955640}
+
+\item 
+\hypertarget{structIntrusiveList_1_1iterator_a2feade78a0827cd4e337e633cc8645dc}{}const \hyperlink{structIntrusiveList_1_1iterator}{iterator} \& {\bfseries operator-\/-\/} ()\label{structIntrusiveList_1_1iterator_a2feade78a0827cd4e337e633cc8645dc}
+
+\item 
+\hypertarget{structIntrusiveList_1_1iterator_a21bc4507c5e536cfd411c000b70db7a2}{}\hyperlink{structIntrusiveList_1_1iterator}{iterator} {\bfseries operator-\/-\/} (int)\label{structIntrusiveList_1_1iterator_a21bc4507c5e536cfd411c000b70db7a2}
+
+\item 
+\hypertarget{structIntrusiveList_1_1iterator_aabef718b245f4ee8b8714b54eee8639b}{}\hyperlink{structIntrusiveList_1_1iterator}{iterator} {\bfseries next} () const \label{structIntrusiveList_1_1iterator_aabef718b245f4ee8b8714b54eee8639b}
+
+\item 
+\hypertarget{structIntrusiveList_1_1iterator_a8d1cc575cd72c8ea507f7af1f30b791d}{}\hyperlink{structIntrusiveList_1_1iterator}{iterator} {\bfseries previous} () const \label{structIntrusiveList_1_1iterator_a8d1cc575cd72c8ea507f7af1f30b791d}
+
+\item 
+void \hyperlink{structIntrusiveList_1_1iterator_a5ff7644483287f7751267fd5642eb646}{insert\+\_\+after} (const iterator\+\_\+base \&it) const 
+\begin{DoxyCompactList}\small\item\em inserts an object into the list after this iterator \end{DoxyCompactList}\item 
+void \hyperlink{structIntrusiveList_1_1iterator_a26bd41fd3a9e136d4893620c13c96479}{insert\+\_\+after} (const iterator\+\_\+base \&it1, const iterator\+\_\+base \&it2) const 
+\begin{DoxyCompactList}\small\item\em inserts a range of objects into the list after this iterator \end{DoxyCompactList}\item 
+void \hyperlink{structIntrusiveList_1_1iterator_ae56c28dede92a6c4e548a333d86667e5}{insert\+\_\+before} (const iterator\+\_\+base \&it) const 
+\begin{DoxyCompactList}\small\item\em inserts an object into the list before this iterator \end{DoxyCompactList}\item 
+void \hyperlink{structIntrusiveList_1_1iterator_acbcf1f9e9d25eeafc8709aebdf050d20}{insert\+\_\+before} (const iterator\+\_\+base \&it1, const iterator\+\_\+base \&it2) const 
+\begin{DoxyCompactList}\small\item\em inserts a range of objects into the list before this iterator \end{DoxyCompactList}\item 
+\hypertarget{structIntrusiveList_1_1iterator_ad88631d8c2418869c4e93b2ba2a32452}{}void \hyperlink{structIntrusiveList_1_1iterator_ad88631d8c2418869c4e93b2ba2a32452}{remove\+\_\+next} () const \label{structIntrusiveList_1_1iterator_ad88631d8c2418869c4e93b2ba2a32452}
+
+\begin{DoxyCompactList}\small\item\em removes object after this iterator from list \end{DoxyCompactList}\item 
+\hypertarget{structIntrusiveList_1_1iterator_a32c22fe2252a3c8fe35f73f3d24902da}{}void \hyperlink{structIntrusiveList_1_1iterator_a32c22fe2252a3c8fe35f73f3d24902da}{remove\+\_\+previous} () const \label{structIntrusiveList_1_1iterator_a32c22fe2252a3c8fe35f73f3d24902da}
+
+\begin{DoxyCompactList}\small\item\em removes object before this iterator from list \end{DoxyCompactList}\item 
+\hypertarget{structIntrusiveList_1_1iterator_a53f6ebbb8c18cabf5d69444a90cf4bdf}{}void \hyperlink{structIntrusiveList_1_1iterator_a53f6ebbb8c18cabf5d69444a90cf4bdf}{remove\+\_\+between} (const iterator\+\_\+base \&it)\label{structIntrusiveList_1_1iterator_a53f6ebbb8c18cabf5d69444a90cf4bdf}
+
+\begin{DoxyCompactList}\small\item\em removes all objects between this iterator and it from list \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Y, Intrusive\+Node Y\+::$\ast$ N, class T = Y$>$struct Intrusive\+List$<$ Y, N, T $>$\+::iterator}
+
+forward iterator, derives from iterator\+\_\+base 
+
+\begin{DoxyNote}{Note}
+value type objects are implicitly convertible to iterators 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structIntrusiveList_1_1iterator_a5ff7644483287f7751267fd5642eb646}{}\index{Intrusive\+List\+::iterator@{Intrusive\+List\+::iterator}!insert\+\_\+after@{insert\+\_\+after}}
+\index{insert\+\_\+after@{insert\+\_\+after}!Intrusive\+List\+::iterator@{Intrusive\+List\+::iterator}}
+\subsubsection[{insert\+\_\+after}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Y , Intrusive\+Node Y\+::$\ast$ N, class T  = Y$>$ void {\bf Intrusive\+List}$<$ Y, N, T $>$\+::iterator\+::insert\+\_\+after (
+\begin{DoxyParamCaption}
+\item[{const iterator\+\_\+base \&}]{it}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{structIntrusiveList_1_1iterator_a5ff7644483287f7751267fd5642eb646}
+
+
+inserts an object into the list after this iterator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & iterator to object to insert \\
+\hline
+\end{DoxyParams}
+\hypertarget{structIntrusiveList_1_1iterator_a26bd41fd3a9e136d4893620c13c96479}{}\index{Intrusive\+List\+::iterator@{Intrusive\+List\+::iterator}!insert\+\_\+after@{insert\+\_\+after}}
+\index{insert\+\_\+after@{insert\+\_\+after}!Intrusive\+List\+::iterator@{Intrusive\+List\+::iterator}}
+\subsubsection[{insert\+\_\+after}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Y , Intrusive\+Node Y\+::$\ast$ N, class T  = Y$>$ void {\bf Intrusive\+List}$<$ Y, N, T $>$\+::iterator\+::insert\+\_\+after (
+\begin{DoxyParamCaption}
+\item[{const iterator\+\_\+base \&}]{it1, }
+\item[{const iterator\+\_\+base \&}]{it2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{structIntrusiveList_1_1iterator_a26bd41fd3a9e136d4893620c13c96479}
+
+
+inserts a range of objects into the list after this iterator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em it1} & iterator to first object to insert \\
+\hline
+{\em it2} & iterator to last object to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+it1 and it2 must be iterators to the same list. 
+
+it1 must appear earlier in the list than it2. 
+
+Lists are circular. Head node must not be present between it1 and it2. 
+\end{DoxyNote}
+\hypertarget{structIntrusiveList_1_1iterator_ae56c28dede92a6c4e548a333d86667e5}{}\index{Intrusive\+List\+::iterator@{Intrusive\+List\+::iterator}!insert\+\_\+before@{insert\+\_\+before}}
+\index{insert\+\_\+before@{insert\+\_\+before}!Intrusive\+List\+::iterator@{Intrusive\+List\+::iterator}}
+\subsubsection[{insert\+\_\+before}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Y , Intrusive\+Node Y\+::$\ast$ N, class T  = Y$>$ void {\bf Intrusive\+List}$<$ Y, N, T $>$\+::iterator\+::insert\+\_\+before (
+\begin{DoxyParamCaption}
+\item[{const iterator\+\_\+base \&}]{it}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{structIntrusiveList_1_1iterator_ae56c28dede92a6c4e548a333d86667e5}
+
+
+inserts an object into the list before this iterator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & iterator to object to insert \\
+\hline
+\end{DoxyParams}
+\hypertarget{structIntrusiveList_1_1iterator_acbcf1f9e9d25eeafc8709aebdf050d20}{}\index{Intrusive\+List\+::iterator@{Intrusive\+List\+::iterator}!insert\+\_\+before@{insert\+\_\+before}}
+\index{insert\+\_\+before@{insert\+\_\+before}!Intrusive\+List\+::iterator@{Intrusive\+List\+::iterator}}
+\subsubsection[{insert\+\_\+before}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Y , Intrusive\+Node Y\+::$\ast$ N, class T  = Y$>$ void {\bf Intrusive\+List}$<$ Y, N, T $>$\+::iterator\+::insert\+\_\+before (
+\begin{DoxyParamCaption}
+\item[{const iterator\+\_\+base \&}]{it1, }
+\item[{const iterator\+\_\+base \&}]{it2}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{structIntrusiveList_1_1iterator_acbcf1f9e9d25eeafc8709aebdf050d20}
+
+
+inserts a range of objects into the list before this iterator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em it1} & iterator to first object to insert \\
+\hline
+{\em it2} & iterator to last object to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+it1 and it2 must be iterators to the same list. 
+
+it1 must appear earlier in the list than it2. 
+
+Lists are circular. Head node must not be present between it1 and it2. 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{intrusive__list_8h}{intrusive\+\_\+list.\+h}\end{DoxyCompactItemize}

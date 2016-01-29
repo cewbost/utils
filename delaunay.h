@@ -32,7 +32,7 @@
   
   @section DESCRIPTION
   
-  A simple class for generating delaunay triangulations in O(log n) time
+  A simple class for generating delaunay triangulations in O(n log n) time.
 */
 
 #include <vector>
@@ -48,35 +48,51 @@
 template<class T>
 class Delaunay
 {
-  typedef std::pair<T, T> __Coords;
+  //typedef std::pair<T, T> __Coords;
   
-  friend __Coords operator+(__Coords a, __Coords b)
+  struct __Coords: std::pair<T, T>
   {
-    return __Coords(a.first + b.first, a.second + b.second);
-  }
-  friend __Coords operator-(__Coords a, __Coords b)
-  {
-    return __Coords(a.first - b.first, a.second - b.second);
-  }
-  friend __Coords operator*(__Coords a, int b)
-  {
-    return __Coords(a.first * b, a.second * b);
-  }
-  friend __Coords operator/(__Coords a, int b)
-  {
-    return __Coords(a.first / b, a.second / b);
-  }
-  friend __Coords operator*(__Coords a, double b)
-  {
-    return __Coords(a.first * b, a.second * b);
-  }
-  friend __Coords operator/(__Coords a, double b)
-  {
-    return __Coords(a.first / b, a.second / b);
-  }
+    using std::pair<T, T>::pair;
+  
+    __Coords operator+(__Coords b) const
+    {
+      return __Coords(this->first + b.first, this->second + b.second);
+    }
+    __Coords& operator+=(__Coords b)
+    {
+      this->first += b.first;
+      this->second += b.second;
+      return *this;
+    }
+    __Coords operator-(__Coords b) const
+    {
+      return __Coords(this->first - b.first, this->second - b.second);
+    }
+    __Coords operator*(int b) const
+    {
+      return __Coords(this->first * b, this->second * b);
+    }
+    __Coords operator/(int b) const
+    {
+      return __Coords(this->first / b, this->second / b);
+    }
+    __Coords operator*(double b) const
+    {
+      return __Coords(this->first * b, this->second * b);
+    }
+    __Coords operator/(double b) const
+    {
+      return __Coords(this->first / b, this->second / b);
+    }
+  };
+  
   friend __Coords _turn90d(__Coords v)
   {
     return __Coords(v.second, -v.first);
+  }
+  friend __Coords _turn90dccw(__Coords v)
+  {
+    return __Coords(-v.second, v.first);
   }
   friend T _dotProduct(__Coords a, __Coords b)
   {
@@ -92,7 +108,7 @@ class Delaunay
   struct __VertCon
   {
     __VertCon* connections[8];
-    __VertCon* more;
+    std::unique_ptr<__VertCon> more;
 
     void connect_ow(__VertCon& other)
     {
@@ -104,7 +120,7 @@ class Delaunay
           return;
         }
       }
-      if(!more) more = new __VertCon;
+      if(!more) more.reset(new __VertCon);
       more->connect_ow(other);
     }
     void disconnect_ow(__VertCon& other)
@@ -117,7 +133,7 @@ class Delaunay
           return;
         }
       }
-      more->disconnect_ow(other);
+      if(more) more->disconnect_ow(other);
     }
 
     void connect(__VertCon& other)
@@ -142,6 +158,7 @@ class Delaunay
         c =  nullptr;
       }
       if(more) more->disconnectAll(real_this);
+      this->connections = 0;
     }
 
     void disconnectAll()
@@ -168,7 +185,6 @@ class Delaunay
       {
         if(c) c->disconnect_ow(*this);
       }
-      delete more;
     }
 
     friend bool isConnected(const __VertCon& a, const __VertCon& b)
@@ -181,7 +197,7 @@ class Delaunay
           if(c == &b)
             return true;
         }
-        ptr = ptr->more;
+        ptr = ptr->more.get();
       }while(ptr);
       return false;
     }
@@ -201,7 +217,7 @@ class Delaunay
             else if(isConnected(*con, b)) return con;
           }
         }
-        a_ptr = a_ptr->more;
+        a_ptr = a_ptr->more.get();
       }while(a_ptr);
       return nullptr;
     }
@@ -986,11 +1002,16 @@ public:
     
     @return vector containing vertex index pairs
   */
-  std::vector<int> edges()
+  
+  template<class ResType = int>
+  std::vector<ResType> edges()
   {
+    static_assert(std::is_integral<ResType>::value,
+      "result type in Delaunay::edges must be integral type");
+  
     const unsigned v_size = _end - _beg;
     
-    std::vector<int> edges;
+    std::vector<ResType> edges;
     
     std::vector<intptr_t> current_v_cons;
     
@@ -1021,12 +1042,18 @@ public:
     triplets
     
     @return vector containing vertex index triplets
+    
+    @note The first index in each triangle has the lowest x-coordinate
   */
-  std::vector<int> triangles()
+  template<class ResType = int>
+  std::vector<ResType> triangles()
   {
+    static_assert(std::is_integral<ResType>::value,
+      "result type in Delaunay::triangles must be integral type");
+  
     const unsigned v_size = _end - _beg;
   
-    std::vector<int> triangles;
+    std::vector<ResType> triangles;
     
     std::vector<intptr_t> current_v_cons;
     using Candidate = std::pair<T, int>;
@@ -1059,13 +1086,152 @@ public:
       {
         auto v1 = current_v_cands[m].second;
         auto v2 = current_v_cands[m + 1].second;
-        triangles.push_back(_rev_sort_map[(int)n]);
+        triangles.push_back(_rev_sort_map[n]);
         triangles.push_back(_rev_sort_map[v2]);
         triangles.push_back(_rev_sort_map[v1]);
       }
     }
+    //note: the first index in each triangle has the lowest x-coordinate
     
     return triangles;
+  }
+  
+  /**
+    @generates the dual graph of the triangulation, (a voronoi diagram).
+    @param p Pointer to a std::vector to store the points of the diagram. They will
+    be stored as X1, Y1, X2, Y2, X3, Y3...
+    @param e Pointer to an std::vector to store the edges of the diagram. They will
+    be stored as pairs of indices of points in the vector pointed to by p.
+    
+    @note Indices stored in *e should be multiplied by 2 to get the actual index in *p
+    of the (x-coordinate of) the given point.
+  */
+  template<class ResType = int>
+  void dual(std::vector<T>* p, std::vector<ResType>* e)
+  {
+    static_assert(std::is_integral<ResType>::value,
+      "result type in Delaunay::triangles must be integral type");
+  
+    //get triangles
+    /*
+      note: this is copied from method triangles, but without reverse sort mapping
+    */
+    const unsigned v_size = _end - _beg;
+  
+    std::vector<ResType> triangles;
+    
+    std::vector<intptr_t> current_v_cons;
+    using Candidate = std::pair<T, int>;
+    std::vector<Candidate> current_v_cands;
+
+    //this might be redundant
+    current_v_cands.reserve(16);
+    current_v_cons.reserve(16);
+    
+    for(unsigned n = 0; n < v_size - 1; ++n)
+    {
+      current_v_cons.clear();
+      current_v_cands.clear();
+      _vert_cons[n].listConnections(current_v_cons);
+      for(auto i: current_v_cons)
+      {
+        intptr_t j = i - (intptr_t)_vert_cons.get(); j /= sizeof(__VertCon);
+        if(j > n)
+        {
+          std::complex<T> comp(
+            _vert(j).first - _vert(n).first,
+            _vert(j).second - _vert(n).second);
+          current_v_cands.push_back(Candidate(std::arg(comp), j));
+        }
+      }
+      std::sort(current_v_cands.begin(), current_v_cands.end(),
+      [](const Candidate& a, const Candidate& b)
+      {return a.first < b.first;});
+      for(unsigned m = 0; m < current_v_cands.size() - 1; ++m)
+      {
+        auto v1 = current_v_cands[m].second;
+        auto v2 = current_v_cands[m + 1].second;
+        triangles.push_back(n);
+        triangles.push_back(v2);
+        triangles.push_back(v1);
+      }
+    }
+    //note: the first index in each triangle has the lowest x-coordinate
+    
+    std::vector<T>& points = *p;
+    std::vector<ResType>& edges = *e;
+    
+    points.clear();
+    edges.clear();
+    
+    for(unsigned i = 0; i < triangles.size(); i += 3)
+    {
+      //find circumcenters
+      std::pair<T, T> p1, p2, v1, v2, res;
+      
+      p1 = (_vert(triangles[i]) + _vert(triangles[i + 1])) / 2;
+      p2 = (_vert(triangles[i + 1]) + _vert(triangles[i + 2])) / 2;
+      v1 = _turn90d(_vert(triangles[i + 1]) - _vert(triangles[i]));
+      v2 = _turn90d(_vert(triangles[i + 2]) - _vert(triangles[i + 1]));
+      
+      if(v1.first == 0)
+      {
+        T k2(v2.second / v2.first);
+        res.first = p1.first;
+        res.second = k2 * res.first - k2 * p2.first + p2.second;
+      }
+      else if(v2.first == 0)
+      {
+        T k1(v1.second / v1.first);
+        res.first = p2.first;
+        res.second = k1 * res.first - k1 * p1.first + p1.second;
+      }
+      else
+      {
+        T k1(v1.second / v1.first), k2(v2.second / v2.first);
+        
+        res.first = (k2 * p2.first + p1.second - k1 * p1.first - p2.second) / (k2 - k1);
+        res.second = k1 * (res.first - p1.first) + p1.second;
+      }
+      
+      points.push_back(res.first);
+      points.push_back(res.second);
+    }
+
+    //find connections
+    for(unsigned i = 0; i < triangles.size() / 3; ++i)
+    {
+      int vert_cons[3] = {
+        triangles[i * 3], triangles[i * 3 + 1], triangles[i * 3 + 2]};
+      int max = vert_cons[vert_cons[1] > vert_cons[2]? 1 : 2];
+      for(unsigned j = i + 1; j < triangles.size() / 3; ++j)
+      {
+        int vert_cons2[3] = {
+          triangles[j * 3], triangles[j * 3 + 1], triangles[j * 3 + 2]};
+        if(vert_cons2[0] > max)
+          break;
+        
+        /*
+          this should be sufficient given that triangles are ordered from left to right
+          and secondarily bottom to top, with vertices in clockwise order
+        */
+        bool connect = false;
+        if(vert_cons[0] == vert_cons2[0])
+          connect = vert_cons[1] == vert_cons2[2];
+        else if(vert_cons[1] == vert_cons2[0])
+          connect = vert_cons[2] == vert_cons2[2];
+        else if(vert_cons[2] == vert_cons2[0])
+          connect = vert_cons[1] == vert_cons2[1];
+        else if(vert_cons[1] == vert_cons2[2])
+          connect = vert_cons[2] == vert_cons2[1];
+        
+        if(connect)
+        {
+          edges.push_back(i);
+          edges.push_back(j);
+        }
+      }
+    }
   }
   
   //constructors

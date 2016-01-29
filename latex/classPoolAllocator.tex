@@ -1,0 +1,138 @@
+\hypertarget{classPoolAllocator}{}\section{Pool\+Allocator$<$ Cell\+Size, Pool\+Size, Max\+Pools $>$ Class Template Reference}
+\label{classPoolAllocator}\index{Pool\+Allocator$<$ Cell\+Size, Pool\+Size, Max\+Pools $>$@{Pool\+Allocator$<$ Cell\+Size, Pool\+Size, Max\+Pools $>$}}
+
+
+Pool allocator template.  
+
+
+
+
+{\ttfamily \#include $<$pool\+\_\+allocator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{classPoolAllocator_a31d9b799f4be0fa8003a434e9ed527f6}{allocate} ()
+\begin{DoxyCompactList}\small\item\em Allocates memory from the pool. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{classPoolAllocator_a3d475d39dd7a79a53e41410743cba412}{allocate} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Allocates memory from the pool. \end{DoxyCompactList}\item 
+void \hyperlink{classPoolAllocator_afe0fc8f55ddb9fef964018ef501924d9}{deallocate} (void $\ast$block)
+\begin{DoxyCompactList}\small\item\em deallocates memory \end{DoxyCompactList}\item 
+void \hyperlink{classPoolAllocator_aa87503936369b4dc59898e05b02403fb}{reserve} (unsigned num\+\_\+pools=1)
+\begin{DoxyCompactList}\small\item\em Preallocates a number of pools. \end{DoxyCompactList}\item 
+void \hyperlink{classPoolAllocator_a96e7694a33d088693599f83e5c06b828}{clear} ()
+\begin{DoxyCompactList}\small\item\em Deallocates all pools. \end{DoxyCompactList}\item 
+\hypertarget{classPoolAllocator_a64a88aa973ad9be1b4f30101dc15b720}{}{\bfseries Pool\+Allocator} (const \hyperlink{classPoolAllocator}{Pool\+Allocator} \&)=delete\label{classPoolAllocator_a64a88aa973ad9be1b4f30101dc15b720}
+
+\item 
+\hypertarget{classPoolAllocator_a8e92d9702cdfcc5ede9e024e7a66e531}{}void {\bfseries operator=} (const \hyperlink{classPoolAllocator}{Pool\+Allocator} \&)=delete\label{classPoolAllocator_a8e92d9702cdfcc5ede9e024e7a66e531}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$unsigned Cell\+Size, unsigned Pool\+Size, unsigned Max\+Pools = 64$>$class Pool\+Allocator$<$ Cell\+Size, Pool\+Size, Max\+Pools $>$}
+
+Pool allocator template. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Cell\+Size} & Size in bytes of each object allocated in the pool. \\
+\hline
+{\em Pool\+Size} & Number of objects per pool. \\
+\hline
+{\em Max\+Pools} & Maximum number of pools. When memory in the existing pools runs out \hyperlink{classPoolAllocator}{Pool\+Allocator} will allocate more memory with operator new. This limits the number of pools the allocator can allocate. default\+: 64 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classPoolAllocator_a31d9b799f4be0fa8003a434e9ed527f6}{}\index{Pool\+Allocator@{Pool\+Allocator}!allocate@{allocate}}
+\index{allocate@{allocate}!Pool\+Allocator@{Pool\+Allocator}}
+\subsubsection[{allocate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned Cell\+Size, unsigned Pool\+Size, unsigned Max\+Pools = 64$>$ void$\ast$ {\bf Pool\+Allocator}$<$ Cell\+Size, Pool\+Size, Max\+Pools $>$\+::allocate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classPoolAllocator_a31d9b799f4be0fa8003a434e9ed527f6}
+
+
+Allocates memory from the pool. 
+
+To pool a specific type of object overload it\textquotesingle{}s new operator to use this function. If there is not enough memory in the pool it will allocate another pool. If the number of pools exceeds Max\+Pools it will fail disgracefully.
+
+\begin{DoxyReturn}{Returns}
+Pointer to a free cell of memory in the pool. 
+\end{DoxyReturn}
+\hypertarget{classPoolAllocator_a3d475d39dd7a79a53e41410743cba412}{}\index{Pool\+Allocator@{Pool\+Allocator}!allocate@{allocate}}
+\index{allocate@{allocate}!Pool\+Allocator@{Pool\+Allocator}}
+\subsubsection[{allocate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned Cell\+Size, unsigned Pool\+Size, unsigned Max\+Pools = 64$>$ void$\ast$ {\bf Pool\+Allocator}$<$ Cell\+Size, Pool\+Size, Max\+Pools $>$\+::allocate (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classPoolAllocator_a3d475d39dd7a79a53e41410743cba412}
+
+
+Allocates memory from the pool. 
+
+To pool a specific type of object overload it\textquotesingle{}s new operator to use this function. If there is not enough memory in the pool it will allocate another pool. If the number of pools exceeds Max\+Pools it will fail disgracefully.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & This argument is simply ignored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Memory adress of a free cell in the pool. 
+\end{DoxyReturn}
+\hypertarget{classPoolAllocator_a96e7694a33d088693599f83e5c06b828}{}\index{Pool\+Allocator@{Pool\+Allocator}!clear@{clear}}
+\index{clear@{clear}!Pool\+Allocator@{Pool\+Allocator}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned Cell\+Size, unsigned Pool\+Size, unsigned Max\+Pools = 64$>$ void {\bf Pool\+Allocator}$<$ Cell\+Size, Pool\+Size, Max\+Pools $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classPoolAllocator_a96e7694a33d088693599f83e5c06b828}
+
+
+Deallocates all pools. 
+
+Destructors of the objects already allocated will not be called. All pointers to memory in the pool will be invalidated. \hypertarget{classPoolAllocator_afe0fc8f55ddb9fef964018ef501924d9}{}\index{Pool\+Allocator@{Pool\+Allocator}!deallocate@{deallocate}}
+\index{deallocate@{deallocate}!Pool\+Allocator@{Pool\+Allocator}}
+\subsubsection[{deallocate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned Cell\+Size, unsigned Pool\+Size, unsigned Max\+Pools = 64$>$ void {\bf Pool\+Allocator}$<$ Cell\+Size, Pool\+Size, Max\+Pools $>$\+::deallocate (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{block}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classPoolAllocator_afe0fc8f55ddb9fef964018ef501924d9}
+
+
+deallocates memory 
+
+To pool a specific type of object overload it\textquotesingle{}s delete operaator to use this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em block} & Pointer to the cell to free. This must point to a cell allocated with the same \hyperlink{classPoolAllocator}{Pool\+Allocator} objects allocate function. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPoolAllocator_aa87503936369b4dc59898e05b02403fb}{}\index{Pool\+Allocator@{Pool\+Allocator}!reserve@{reserve}}
+\index{reserve@{reserve}!Pool\+Allocator@{Pool\+Allocator}}
+\subsubsection[{reserve}]{\setlength{\rightskip}{0pt plus 5cm}template$<$unsigned Cell\+Size, unsigned Pool\+Size, unsigned Max\+Pools = 64$>$ void {\bf Pool\+Allocator}$<$ Cell\+Size, Pool\+Size, Max\+Pools $>$\+::reserve (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{num\+\_\+pools = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classPoolAllocator_aa87503936369b4dc59898e05b02403fb}
+
+
+Preallocates a number of pools. 
+
+Allocating more pools than Max\+Pools will fail disgracefully.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+pools} & Number of pools to preallocate. Default\+: 1 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{pool__allocator_8h}{pool\+\_\+allocator.\+h}\end{DoxyCompactItemize}
