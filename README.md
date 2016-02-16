@@ -28,3 +28,6 @@ A ring buffer class.
 
 ###worley
 A class for generating worley noise (cell noise) in O(n) = n time. Can also be used for generating signed distance field maps. Supports calculating distance to any number of nearest points in the graph.
+
+###sso_vector
+A vector with "small size optimization". Elements are stored in the object itself avoiding dynamic allocation for arrays below a specified length.
