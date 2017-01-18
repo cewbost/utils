@@ -1,17 +1,19 @@
 # utils
 Just some C++ utilities all header only.
 
-These haven't been tested particularly thoroughly. If you encouter any bugs or even compile-time errors(!) please message me.
+If you encouter any bugs or even compile-time errors(!) please message me.
 
 documentation can be generated with doxygen.
 
 ### bin_serializer
-A class for serializing objects into a binary buffer. it simply memcpys objects of any type into the buffer
+A class for serializing objects into a binary buffer. it simply memcpys objects of any type into the buffer.
 
 ### cfheap
+
 A cache-friendly heap structure that stores all elements into a continuous buffer. Don't really know why I made this since the C++ standard library implements priority\_queue the same way, but it preforms slightly better than glibc++ in my benchmarks.
 
 ###delaunay
+
 A class for computing delaynay triangulations in O(n) = n \* log2(n), as well as the dual-graph (voronoi diagram). The output is suitable for rendering with opengl.
 
 ###intrusive_list
