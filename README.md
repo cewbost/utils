@@ -14,7 +14,7 @@ A cache-friendly heap structure that stores all elements into a continuous buffe
 
 ###delaunay
 
-A class for computing delaynay triangulations in O(n) = n \* log2(n), as well as the dual-graph (voronoi diagram). The output is suitable for rendering with opengl.
+A class for computing delaynay triangulations in O(n \* log2(n)) time, as well as the dual-graph (voronoi diagram). The output is suitable for rendering with opengl.
 
 ###intrusive_list
 Intrusive linked list.
@@ -29,7 +29,7 @@ Reference counting. Differs from std::shared\_ptr in that it requires that the r
 A ring buffer class.
 
 ###worley
-A class for generating worley noise (cell noise) in O(n) = n time. Can also be used for generating signed distance field maps. Supports calculating distance to any number of nearest points in the graph.
+A class for generating worley noise (cell noise) in O(n) time. Can also be used for generating signed distance field maps. Supports calculating distance to any number of nearest points in the graph.
 
 ###sso_vector
 A vector with "small size optimization". Elements are stored in the object itself avoiding dynamic allocation for arrays below a specified length.
